@@ -46,7 +46,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    'C:/Users/pakumar/python_practice/guitarchords/templates/',
+    '/home/pakumar/guitarclub/GuitarClub/templates/'
+    #'C:/Users/pakumar/python_practice/guitarchords/templates/',
   
     #'C:/Users/pakumar/python_practice/comparo/password_reset/templates/password_reset/'
 )
@@ -108,7 +109,8 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = (
-'C:/Users/pakumar/python_practice/guitarchords/guitarchordsapp/static/',
+    '/home/pakumar/guitarclub/GuitarClub/guitarchordsapp/static/'
+#'C:/Users/pakumar/python_practice/guitarchords/guitarchordsapp/static/',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

@@ -17,7 +17,7 @@ def catalog(request):
 	name = 'Gc'
 	#return HttpResponse(response_html)
 	
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -143,7 +143,7 @@ def catalog(request):
 def search(request):
 	query = request.GET['q']
 	likequery = "%"+str(query)+"%"
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -177,7 +177,7 @@ def search(request):
 		
 def guitar_chords(request):
 	alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -246,7 +246,7 @@ def capture_guitar_chords(request):
 	guitarchords =str(request.POST.get('guitarchords')).replace("'","").replace('"',"")
 
 
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -262,7 +262,7 @@ def video_guitar_lessons(request):
 
 def gospel_guitar_page(request):
 	alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -306,7 +306,7 @@ def gospel_alpha_page(request, d):
 	songname = str(d)+"%"
 	alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -329,7 +329,7 @@ def gospel_alpha_page(request, d):
 def gospel_guitarsongs(request, d):
 	songname = str(d)
 	alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -348,7 +348,7 @@ def gospel_guitarsongs(request, d):
 def gospel_guitarchords(request, d):
 	songname = str(d)
 	
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -373,7 +373,7 @@ def guitar_alpha_page(request, d):
 		language = str(songlist[1])
 		if language <> 'ALL':
 
-			db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+			db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 			# prepare a cursor object using cursor() method
 			cursor = db.cursor()
@@ -388,7 +388,7 @@ def guitar_alpha_page(request, d):
 			
 			album_name = [row[0] for row in rows]
 		else:
-			db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+			db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 			# prepare a cursor object using cursor() method
 			cursor = db.cursor()
@@ -405,7 +405,7 @@ def guitar_alpha_page(request, d):
 	else:
 		songlist = str(d)
 		alpha_clicked = str(songlist)+"%"
-		db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+		db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 		# prepare a cursor object using cursor() method
 		cursor = db.cursor()
@@ -426,7 +426,7 @@ def guitar_alpha_page(request, d):
 def artist_guitarsongs(request, d):
 	songname = str(d)
 	alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -445,7 +445,7 @@ def artist_guitarsongs(request, d):
 def det_guitarchords(request, d):
 	songname = str(d)
 	
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
@@ -466,7 +466,7 @@ def more_guitarsongs(request, d):
 	language = str(lang_selected[1])
 	
 	alpha = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-	db = MySQLdb.connect("localhost","pakumar","P@ssw0rd","testdb" )
+	db = MySQLdb.connect("mysql.server","pakumar","P@ssw0rd","testdb" )
 	# prepare a cursor object using cursor() method
 	cursor = db.cursor()
 	sql = ("""select distinct CONCAT(songname," - ",albumname) from userchords 
