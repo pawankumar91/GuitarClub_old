@@ -1,0 +1,61 @@
+<html>
+
+<Title> Welcome to The Guitar Club </title>
+{% load staticfiles %}
+<head>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+<link href="/static/style2.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+ 
+    <script type="text/javascript" src="/static/app2.js"></script>
+
+
+</head>      
+<body>
+    <div class="menu">
+
+      <!-- Menu icon -->
+      <div class="icon-close">
+        <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <li><a href="#">Home</a></li>
+		<li><a href = "#">Learn Guitar</a></li>
+        <li><a href="#">Guitar Chords</a></li>
+        <li><a href="#">Guitar Tabs</a></li>
+        <li><a href="#">Music Events</a></li>
+		<li><a href="#">About us</a></li>
+		<li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+<div class="jumbotron">
+
+      <div class="icon-menu">
+	    <i class="fa fa-bars"></i>
+        MENU 
+      </div>
+</div>
+
+</body>
+<div class = "containera">
+
+	{% if name %}
+    <ul>
+
+        {% for d in name %}
+
+	 <li><a id = {{d}} href ='/hindi_guitarchords/'> <label> {{ d }} </label> </a> </li>
+
+        {% endfor %}
+
+    </ul><br>
+
+    {% endif %}
+</div>
+	</html>

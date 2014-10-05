@@ -1,0 +1,86 @@
+<html>
+<title> Guitar Chords </title>
+{% load staticfiles %}
+
+<head>
+
+		<meta name="description" content="This page is about France, with particular emphasis on baguettes">
+
+<meta name="keywords" content="{{song_name}} Chords , {{song_name}} guitar chords , guitar chords for {{song_name}}">
+
+<meta name="robots" content="all">
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+<link href="/static/style.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+ 
+    <script type="text/javascript" src="/static/app.js"></script>
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+
+</head> 
+<body>     
+<div class="nav">
+
+		<!-- Menu icon -->
+		<!--div class="icon-close"-->
+		<!--img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png"-->
+		<!--/div-->
+
+		<!-- Menu -->
+
+		<ul>
+		<ul class = "pull-left">
+		<li> <a href = "/catalog/">Logo The Guitar Club</a></li>
+		</ul>
+		<ul class = "pull-right">
+		<li><a href="/catalog/">Home</a></li>
+		<li><a href = "/learn_guitar/">Learn Guitar</a></li>
+		<li><a href="/guitar_chords/">Guitar Chords</a></li>
+		<li><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
+		<li><a href="/upload_guitar_chords/">Upload Guitar Chords</a></li>
+		<li><a href="#">Your Guitar Club</a></li>
+		<li><a href="#">Contact</a></li>
+		</ul>
+		</ul>
+	</div>
+	<div class="jumbotron1">
+		<div class = "searchbar">
+			<form method="get" action="/search" id="search1">
+				<input name="q" type="text" size="40" placeholder="Search chords..." />
+			</form>
+		</div>
+		<p><strong>Enjoy playing "{{song_name|cut:"['"|cut:"']"|truncatechars:44}} " </strong></p>
+	</div>
+	
+	<div class = "songcontent">
+	
+	<p>{{chords|safeseq|join:"\n "}}</p> 
+	
+	</div>
+<div class = "footer">
+	      <h3 class="float">&copy; 2014-15 The Guitar Club. All rights reserved.</h3>
+	  <h5>Contact US</h5>
+       <div id="footer_address">
+        <p>Registered Office:<br/>
+        Level Two, The Old Malthouse, <br/>
+        Clarence St,<br/>
+        Bath BA1 5NS (not our trading address)</p>
+      </div>
+      
+      <div class="footer-nav">
+        <ul class = "pull-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/software">Software</a></li>
+          <li><a href="/docs/cookies">Cookie Policy</a></li>
+        </ul>
+      </div>
+      
+</div>	
+</body>
+</html>

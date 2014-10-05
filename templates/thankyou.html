@@ -1,0 +1,61 @@
+<html>
+<title> Guitar Chords </title>
+{% load staticfiles %}
+
+<head>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+<link href="/static/style.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+ 
+    <script type="text/javascript" src="/static/app.js"></script>
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+
+</head>      
+<div class="nav">
+
+		<!-- Menu icon -->
+		<!--div class="icon-close"-->
+		<!--img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png"-->
+		<!--/div-->
+
+		<!-- Menu -->
+
+		<ul>
+		<ul class = "pull-left">
+		<li> <a href = "/catalog/">Logo The Guitar Club</a></li>
+		</ul>
+		<ul class = "pull-right">
+		<li><a href="/catalog/">Home</a></li>
+		<li><a href = "/learn_guitar/">Learn Guitar</a></li>
+		<li><a href="/guitar_chords/">Guitar Chords</a></li>
+		<li><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
+		<li><a href="/upload_guitar_chords/">Upload Guitar Chords</a></li>
+		<li><a href="#">Your Guitar Club</a></li>
+		<li><a href="#">Contact</a></li>
+		</ul>
+		</ul>
+	</div>
+	<div class="jumbotron1">
+		<div class = "searchbar">
+			<form method="get" action="/search" id="search1">
+				<input name="q" type="text" size="40" placeholder="Search chords..." />
+			</form>
+		</div>
+		<p><strong>Thank You, Please continue to support us... </strong></p>
+	</div>
+	<div class = "songcontent_new">
+	<p> Thank you <strong>[{{name}}]</strong> <br>
+		For uploading the song <strong>[{{songname}}]</strong> | <strong>[{{category}}]</strong> from <strong>[{{albumname}}]</strong> <br><br>
+	The same will be reflected on the website in the next 24 hours.<br>
+	Please continue to support us...
+<br>
+	
+
+	</p>
+	</div>
+	</html>
+	
