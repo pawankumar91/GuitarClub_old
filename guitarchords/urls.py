@@ -1,15 +1,17 @@
 from django.conf.urls import patterns, include, url
-
+from django.http import HttpResponseRedirect
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'guitarchords.views.home', name='home'),
+    #url(r'^/$', 'guitarchords.views.catalog', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-	url(r'^catalog/$', 'guitarchordsapp.views.catalog'),
+    #url(r'^$', lambda r: HttpResponseRedirect("/home")),
+	url(r'^$', 'guitarchordsapp.views.catalog'),
+	url(r'^home/$', 'guitarchordsapp.views.catalog'),
 	url(r'^hindi_guitarchords/(?P<d>.*)/$', 'guitarchordsapp.views.det_guitarchords'),
 	url(r'^english_guitarchords/(?P<d>.*)/$', 'guitarchordsapp.views.det_guitarchords'),
 	url(r'^tamil_guitarchords/(?P<d>.*)/$', 'guitarchordsapp.views.det_guitarchords'),
@@ -17,9 +19,9 @@ urlpatterns = patterns('',
 	url(r'^kannada_guitarchords/(?P<d>.*)/$', 'guitarchordsapp.views.det_guitarchords'),
 	url(r'^telugu_guitarchords/(?P<d>.*)/$', 'guitarchordsapp.views.det_guitarchords'),
 	url(r'^gospel_guitarchords/(?P<d>.*)/$', 'guitarchordsapp.views.det_guitarchords'),
-		
+
 	url(r'^more_guitarsongs/(?P<d>.*)/$', 'guitarchordsapp.views.more_guitarsongs'),
-	
+
 	url(r'^search.*/$', 'guitarchordsapp.views.search'),
 	url(r'^guitar_chords/$', 'guitarchordsapp.views.guitar_chords'),
 	url(r'^learn_guitar/$', 'guitarchordsapp.views.learn_guitar'),

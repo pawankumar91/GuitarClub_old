@@ -40,15 +40,16 @@ INSTALLED_APPS = (
 	'guitarchordsapp',
 	#'djangodblog',
 	'django.contrib.staticfiles',
-)
+'guitarchords',
+    )
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/pakumar/guitarclub/GuitarClub/templates/'
+    '/home/pakumar/GuitarClub/templates/'
     #'C:/Users/pakumar/python_practice/guitarchords/templates/',
-  
+
     #'C:/Users/pakumar/python_practice/comparo/password_reset/templates/password_reset/'
 )
 
@@ -72,13 +73,13 @@ WSGI_APPLICATION = 'guitarchords.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 #DATABASES = {
-#    'default': { 
-#        'ENGINE': 'django.db.backends.mysql', 
-#        'NAME': 'testdb',                     
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'testdb',
 #        'USER': 'pakumar',
  #       'PASSWORD': 'P@ssw0rd',
   #  }
-#}      
+#}
 
 
 DATABASES = {
@@ -109,7 +110,7 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = (
-    '/home/pakumar/guitarclub/GuitarClub/guitarchordsapp/static/'
+    '/home/pakumar/GuitarClub/guitarchordsapp/static/'
 #'C:/Users/pakumar/python_practice/guitarchords/guitarchordsapp/static/',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.

@@ -56,7 +56,7 @@ background: #202024 url('http://www.firstkissfilms.com/v1site_images/backgrounds
 
 
 .songcontent_new_ug p{
-clear: left;            
+clear: left;
 }
 .subcontent_lg {
     width: 880px;
@@ -119,8 +119,11 @@ position:relative;
 }
 html {
 /*  background-color:    #A3C2FF;*/
-  background:  url('/static/use1.jpg/')
-  /*url('https://0.s3.envato.com/files/71246732/brainstorming_doodles_business_vector_drawing_elements_website_development_icons_set_web_analytics_items_background_preview.jpg')*/ no-repeat center center fixed;
+  background-image:url('/static/use1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  /*url('https://0.s3.envato.com/files/71246732/brainstorming_doodles_business_vector_drawing_elements_website_development_icons_set_web_analytics_items_background_preview.jpg')*/
    -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -132,17 +135,21 @@ body {
   margin: 0;
   position: relative;
   background-repeat: no-repeat;
-background:  url('/static/use1.jpg/')no-repeat center center fixed;
+background-image:url('/static/use1.jpg'); /*no-repeat center center fixed;*/
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+
 .learnguitar {
 position:relative;
 top:70px;
 color: #fff;
-font-size: 48px;  
+font-size: 48px;
 font-family:'Shift', sans-serif;
 font-weight: bold;
 }
@@ -211,7 +218,7 @@ margin-right: auto;
                 float:right;
                 right:5px;
                 top:22px;
-    background: url(search-white.png) no-repeat 10px 6px #fcfcfc;
+    background-image: url('search-white.png') no-repeat 10px 6px #fcfcfc;
     border: 1px solid #d1d1d1;
     font: bold 12px Arial,Helvetica,Sans-serif;
     color: black;
@@ -234,7 +241,7 @@ margin-right: auto;
     width: 250px;
     }
 
-                
+
 .menu {
   background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
   left: -200px;  /* start off behind the scenes */
@@ -250,13 +257,13 @@ margin-right: auto;
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
-                
+
 }
 
 .jumbotron1 {
                 background-color:gold;
                 height: 80px;
-                width:880px;  
+                width:880px;
                 position:relative;
                 left:205px;
 
@@ -264,14 +271,14 @@ margin-right: auto;
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
-                
+
 }
 
 .jumbotron1 p{
 position:absolute;
 top : 28%;
 left:5%;
-font-size: 18px;  
+font-size: 18px;
 font-family:'Shift', sans-serif;
 
 }
@@ -304,7 +311,7 @@ font-family:'Shift', sans-serif;
     padding:10px 10px;
     left:205px;
 }
-                
+
 .songcontent_new {
     width: 880px;
     position:relative;
@@ -395,7 +402,7 @@ padding:1px 5px;
 
 .Guitarlessons a {
 color:#fff;
-font-size: 10px;  
+font-size: 10px;
 font-family:'Shift', sans-serif;
 font-weight: bold;
 padding : 1px 10px;
@@ -404,7 +411,7 @@ padding : 1px 10px;
 .Guitarlessons p {
 top:5px;
 color: white;
-font-size: 12px;  
+font-size: 12px;
 font-weight: bold;
 padding: 1px 10px;
 }
@@ -454,7 +461,7 @@ list-style:;
 top:2%;
 color: #5a5a5a;
 
-font-size: 12px;  
+font-size: 12px;
 padding:5px 10px;
 font-weight: bold;
 }
@@ -489,7 +496,7 @@ opacity:0.8;
 .popularhindi a {
 top:2%;
 color: #5a5a5a;
-font-size: 12px;  
+font-size: 12px;
 padding:5px 10px;
 font-weight: bold;
 }
@@ -504,7 +511,7 @@ font-size: 20px;
 background-color:white;
 opacity:0.8;
 /*rgb(23,28,24)*/;
-  /*background-image: url('http://www.animalhi.com/thumbnails/detail/20121102/reservoir%20dogs%20monochrome%20white%20background%201920x1200%20wallpaper_www.animalhi.com_14.jpg');*/ 
+  /*background-image: url('http://www.animalhi.com/thumbnails/detail/20121102/reservoir%20dogs%20monochrome%20white%20background%201920x1200%20wallpaper_www.animalhi.com_14.jpg');*/
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -527,7 +534,7 @@ font-size: 20px;
 .popularenglish a {
 top:2%;
 color: #5a5a5a;
-font-size: 12px;  
+font-size: 12px;
 
 font-weight: bold;
 padding:5px 10px;
@@ -554,7 +561,7 @@ opacity:0.8;
 .populartamil a {
 top:2%;
 color: #5a5a5a;
-font-size: 12px;  
+font-size: 12px;
 font-weight: bold;
 padding:5px 10px;
 }
@@ -586,7 +593,7 @@ opacity:0.8;
 .popularbangla a {
 top:2%;
 color: #5a5a5a;
-font-size: 12px;  
+font-size: 12px;
 font-weight: bold;
 padding:5px 10px;
 }
@@ -635,7 +642,7 @@ opacity:0.8;
 .popularkannada a {
 top:2%;
 color: #5a5a5a;
-font-size: 12px;  
+font-size: 12px;
 font-weight: bold;
 padding:5px 10px;
 }
@@ -666,7 +673,7 @@ opacity:0.8;
 top:2%;
 color: #5a5a5a;
 padding:5px 10px;
-font-size: 12px;  
+font-size: 12px;
 
 font-weight: bold;
 }
@@ -696,7 +703,7 @@ opacity:0.8;
 .google_ads2 a {
 top:2%;
 color: #fff;
-font-size: 12px;  
+font-size: 12px;
 font-family:'Shift', sans-serif;
 font-weight: bold;
 }
@@ -774,7 +781,7 @@ ul#level-two {
 list-style:none;
 
 }
-li#level-two {	
+li#level-two {
 	top:-15px;
 	display: none;
 	position:relative;
@@ -785,105 +792,105 @@ li#level-two {
     font-size:12px;
     font-weight: bold;
     text-indent: -40px;
-    } 
+    }
 
 ul#level-one:hover  li#level-two{
    display: block;
-   
-} 
+
+}
 
 
 
-.popularenglish:hover{ 
- margin-left: 40px;    
+.popularenglish:hover{
+ margin-left: 40px;
   transition: margin-left .7s;
      -moz-transition: margin-left 1.0s; /* Firefox 4 */
   -webkit-transition: margin-left .5s; /* Safari and Chrome */
   -o-transition: margin-left .5s; /* Opera */
 -moz-transform:scale(1.11);
 -webkit-transform: scale(1.11);
-opacity:0.9; 
- } 
- .popularenglish a:hover{ 
+opacity:0.9;
+ }
+ .popularenglish a:hover{
 font-size:14px;
 }
-.popularhindi:hover{ 
-margin-left: 40px;    
+.popularhindi:hover{
+margin-left: 40px;
 transition: margin-left .7s;
 -moz-transition: margin-left 1.0s; /* Firefox 4 */
 -webkit-transition: margin-left .5s; /* Safari and Chrome */
 -o-transition: margin-left .5s; /* Opera */
 -moz-transform:scale(1.11);
 -webkit-transform: scale(1.11);
-opacity:0.9; 
-} 
-.popularhindi a:hover{ 
+opacity:0.9;
+}
+.popularhindi a:hover{
 font-size:14px;
 }
-.popularsongs:hover{ 
-margin-left: 40px;    
+.popularsongs:hover{
+margin-left: 40px;
 transition: margin-left .7s;
 -moz-transition: margin-left 1.0s; /* Firefox 4 */
 -webkit-transition: margin-left .5s; /* Safari and Chrome */
 -o-transition: margin-left .5s; /* Opera */
 -moz-transform:scale(1.11);
 -webkit-transform: scale(1.11);
-opacity:0.9; 
-} 
+opacity:0.9;
+}
 
-.popularsongs a:hover{ 
+.popularsongs a:hover{
 font-size:14px;
 }
-.populartamil:hover{ 
-margin-left: 40px;    
+.populartamil:hover{
+margin-left: 40px;
 transition: margin-left .7s;
 -moz-transition: margin-left 1.0s; /* Firefox 4 */
 -webkit-transition: margin-left .5s; /* Safari and Chrome */
 -o-transition: margin-left .5s; /* Opera */
 -moz-transform:scale(1.11);
 -webkit-transform: scale(1.11);
-opacity:0.9; 
-} 
- .populartamil a:hover{ 
+opacity:0.9;
+}
+ .populartamil a:hover{
 font-size:14px;
 }
-.popularbangla:hover{ 
-margin-left: 40px;    
+.popularbangla:hover{
+margin-left: 40px;
 transition: margin-left .7s;
 -moz-transition: margin-left 1.0s; /* Firefox 4 */
 -webkit-transition: margin-left .5s; /* Safari and Chrome */
 -o-transition: margin-left .5s; /* Opera */
 -moz-transform:scale(1.11);
 -webkit-transform: scale(1.11);
-opacity:0.9; 
-} 
-.popularbangla a:hover{ 
+opacity:0.9;
+}
+.popularbangla a:hover{
 font-size:14px;
 }
-.popularkannada:hover{ 
-margin-left: 40px;    
+.popularkannada:hover{
+margin-left: 40px;
 transition: margin-left .7s;
 -moz-transition: margin-left 1.0s; /* Firefox 4 */
 -webkit-transition: margin-left .5s; /* Safari and Chrome */
 -o-transition: margin-left .5s; /* Opera */
 -moz-transform:scale(1.11);
 -webkit-transform: scale(1.11);
-opacity:0.9; 
-} 
-.popularkannada a:hover{ 
+opacity:0.9;
+}
+.popularkannada a:hover{
 font-size:14px;
 }
-.populargospel:hover{ 
-margin-left: 40px;    
+.populargospel:hover{
+margin-left: 40px;
 transition: margin-left .7s;
 -moz-transition: margin-left 1.0s; /* Firefox 4 */
 -webkit-transition: margin-left .5s; /* Safari and Chrome */
 -o-transition: margin-left .5s; /* Opera */
 -moz-transform:scale(1.11);
 -webkit-transform: scale(1.11);
-opacity:0.9; 
-} 
-.populargospel a:hover{ 
+opacity:0.9;
+}
+.populargospel a:hover{
 font-size:14px;
 }
 .popularkannada h3 {
@@ -891,7 +898,7 @@ color:#0099FF;
 }
 
 #.#popularsongs  :hover {
-  margin-left: 10px;    
+  margin-left: 10px;
   transition: margin-left .5s;
   -moz-transition: margin-left .5s; /* Firefox 4 */
   -webkit-transition: margin-left .5s; /* Safari and Chrome */

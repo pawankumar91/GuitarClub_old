@@ -18,12 +18,12 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
- 
+
     <script type="text/javascript" src="/static/app.js"></script>
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 
-</head>   
-<body>   
+</head>
+<body>
 <div class="nav">
 
 		<!-- Menu icon -->
@@ -35,10 +35,10 @@
 
 		<ul>
 		<ul class = "pull-left">
-		<li> <a href = "/catalog/">Logo The Guitar Club</a></li>
+		<li> <a href = "/home/">Logo The Guitar Club</a></li>
 		</ul>
 		<ul class = "pull-right">
-		<li><a href="/catalog/">Home</a></li>
+		<li><a href="/home/">Home</a></li>
 		<li><a href = "/learn_guitar/">Learn Guitar</a></li>
 		<li><a href="/guitar_chords/">Guitar Chords</a></li>
 		<li><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
@@ -63,8 +63,8 @@
 		{% for d in alpha %}
 			<li><a href="/guitar_alpha_page/{{d}}">{{d}}</a></li>
 		{% endfor %}
-		
-		
+
+
 		</ul>
 </div>
 				<div class = "songcontent_english">
@@ -100,7 +100,7 @@
 						{% endfor %}
 					</ul><br>
 					{% else %}
-				<p>  &#9785, No Results Found </p>			
+				<p>  &#9785, No Results Found </p>
 					{% endif %}
 		</div>
 
@@ -110,21 +110,26 @@
 	  <h5>Contact US</h5>
        <div id="footer_address">
         <p>Registered Office:<br/>
-        Level Two, The Old Malthouse, <br/>
-        Clarence St,<br/>
-        Bath BA1 5NS (not our trading address)</p>
+        Bangalore, Karnataka, <br/>
+        India<br/>
+        (not our trading address)</p>
       </div>
-      
+
       <div class="footer-nav">
         <ul class = "pull-right">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/software">Software</a></li>
-          <li><a href="/docs/cookies">Cookie Policy</a></li>
+          <li><a href="/home/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Software</a></li>
+          <li><a href="#">Cookie Policy</a></li>
         </ul>
       </div>
-      
+
 </div>
+
+
 </body>
-</html>
+
+
+
+	</html>

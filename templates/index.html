@@ -1,10 +1,10 @@
 <html>
 
-<Title> Welcome to The Guitar Club </title>
+<Title>The Guitar Club</title>
 {% load staticfiles %}
 <head>
 
-<meta name="description" content="Welcome to "THE GUITAR CLUB" - A virtual world for all the guitar lovers. 
+<meta name="description" content="Welcome to "THE GUITAR CLUB" - A virtual world for all the guitar lovers.
 We assist you in learning how to play a guitar and possess an assortment of guitar chords that you always wanted to play">
 
 <meta name="keywords" content="Popular Hindi Guitar Chords, Popular English Guitar Chords, Popular Gospel Guitar Chords, Popular Christian Guitar Songs and Chords, Popular Tamil Guitar Chords, How to play Guitar, Learn to play Guitar in 30minutes">
@@ -18,13 +18,13 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
- 
+
     <script type="text/javascript" src="/static/app.js"></script>
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 	<script src="jquery.easing.1.3.js" type="text/javascript"></script>
 
-</head>  
-    
+</head>
+
 <body  onload = "changeBackground()">
 
 	<div class="nav">
@@ -38,10 +38,10 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 
 		<ul>
 		<ul class = "pull-left">
-		<li> <a href = "/catalog/">Logo The Guitar Club</a></li>
+		<li> <a href = "/home/">Logo The Guitar Club</a></li>
 		</ul>
 		<ul class = "pull-right">
-		<li><a href="/catalog/">Home</a></li>
+		<li><a href="/home/">Home</a></li>
 		<li><a href = "/learn_guitar/">Learn Guitar</a></li>
 		<li><a href="/guitar_chords/">Guitar Chords</a></li>
 		<li><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
@@ -59,13 +59,13 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 		</div>
 		<div class = "learnguitar">
 			<a href="/video_guitar_lessons/">LEARN TO PLAY GUITAR IN 30MINS</a>
-			<h6> PLAY A COMPLETE GUITAR SONG...</h6>	
+			<h6> PLAY A COMPLETE GUITAR SONG...</h6>
 		</div>
 	</div>
-	
-	
+
+
 	<div class = "subcontent">
-	
+
 		<div class = "Guitarlessons">
 			<h5>LEARN TO PLAY GUITAR</h5>
 			<p>Learning guitar can seem daunting. With all the different websites and teaching methods available it can be difficult choosing where to begin.<br>
@@ -94,11 +94,11 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 
 				{% endif %}
 				<a id = more_hindi_songs href = "/more_guitarsongs/{{d}}/{{hin_lang}}"> More Hindi Songs...</a>
-			</div>	
+			</div>
 		</div>
 
 
-<!popularhindi refers to english>		
+<!popularhindi refers to english>
 		<div class = "popularhindi">
 			<div class = "podtitle">
 				<h2> POPULAR ENGLISH SONGS </h2>
@@ -115,11 +115,11 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 
 			{% endif %}
 			<a id = more_english_songs href = "/more_guitarsongs/{{d}}/{{eng_lang}}"> More English Songs...</a>
-		</div>	
+		</div>
 	</div>
 
-	
-			
+
+
 	<!popularenglish refers to tamil songs>
 
 		<div class = "popularenglish">
@@ -153,7 +153,7 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 				{% endfor %}
 			</ul><br>
 			{% else %}
-				<p> &#9785, No Results Found </p>			
+				<p> &#9785, No Results Found </p>
 			{% endif %}
 			<a id = more_bangla_songs href = "/more_guitarsongs/{{d}}/{{bangla_lang}}"> More Bangla Songs...</a>
 			</div>
@@ -174,7 +174,7 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 				{% endfor %}
 			</ul><br>
 			{% else %}
-				<p> &#9785, No Results Found </p>			
+				<p> &#9785, No Results Found </p>
 			{% endif %}
 			<a id = more_kannada_songs href = "/more_guitarsongs/{{d}}/{{kan_lang}}"> More Kannada Songs...</a>
 
@@ -184,8 +184,8 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 		<div class = "google_ads1">
 			<h3> Google Ads </h3>
 		</div>
-				
-<!popular Kannada is telugu>		
+
+<!popular Kannada is telugu>
 		<div class = "popularkannada">
 			<div class = "podtitle">
 				<h2> POPULAR TELUGU SONGS </h2>
@@ -198,7 +198,7 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 				{% endfor %}
 			</ul><br>
 			{% else %}
-				<p> &#9785, No Results Found </p>			
+				<p> &#9785, No Results Found </p>
 			{% endif %}
 			<a id = more_telugu_songs href = "/more_guitarsongs/{{d}}/{{tel_lang}}"> More Telugu Songs...</a>
 			</div>
@@ -217,16 +217,16 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 				{% endfor %}
 			</ul><br>
 			{% else %}
-				<p> &#9785, No Results Found </p>			
+				<p> &#9785, No Results Found </p>
 			{% endif %}
 			<a id = more_gospel_songs href = "/gospel_guitar_page/"> More Gospel Songs...</a>
 			</div>
-		</div>		
-		
+		</div>
+
 		<div class = "google_ads2">
 			<h3> Google Ads </h3>
 		</div>
-		
+
 		<div class = "google_ads3">
 			<h3> Google Ads </h3>
 		</div>
@@ -236,21 +236,21 @@ We assist you in learning how to play a guitar and possess an assortment of guit
 	  <h5>Contact US</h5>
        <div id="footer_address">
         <p>Registered Office:<br/>
-        Level Two, The Old Malthouse, <br/>
-        Clarence St,<br/>
-        Bath BA1 5NS (not our trading address)</p>
+        Bangalore, Karnataka, <br/>
+        India<br/>
+        (not our trading address)</p>
       </div>
-      
+
       <div class="footer-nav">
         <ul class = "pull-right">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/software">Software</a></li>
-          <li><a href="/docs/cookies">Cookie Policy</a></li>
+          <li><a href="/home/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Software</a></li>
+          <li><a href="#">Cookie Policy</a></li>
         </ul>
       </div>
-      
+
 </div>
 
 
