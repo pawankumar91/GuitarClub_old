@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block html %}
+    <html id="main">
+{% endblock %}
+{% block title %}
+    <Title>Guitar Club - Do You Know</title>
+{% endblock %}
+
+{% block meta %}
+    <meta charset="utf-8" />
+    <meta name="description" content="Do you know?? Heaps of interesting fun facts and figures about music to keep you entertained for hours">
+    <meta name="keywords" content="Popular Hindi Guitar Chords, Popular English Guitar Chords, Popular Gospel Guitar Chords, Popular Christian Guitar Songs and Chords, Popular Tamil Guitar Chords, How to play Guitar, Learn to play Guitar in 30minutes">
+    <meta name="robots" content="all">
+{% endblock %}
+
+{% block body %}
+    <body  id="main">
+{% endblock %}
+{% block content %}
+    <div class="jumbotron1">
+        	<div class="jumbotron1_sub">
+        		<p><strong>Do you know ???</strong></p>
+        		<div class = "searchbar">
+        			<form method="get" action="/search" id="search1">
+        				<input name="q" type="text" size="40" placeholder="Search chords..." />
+        			</form>
+        		</div>
+        	</div>
+        </div>
+        <div class = "subcontent_all">
+
+
+        <div class = "dyk_content">
+              {% for doyouknow in doyouknow %}
+            <Div class="dyk_subcontent">
+
+                    <h2><a href = "/dOyOuKnOw_details/{{doyouknow.id }}/"> {{ doyouknow.title }} </a></h2><br>
+
+                     <p id="content">{{ doyouknow.body|truncatewords:44 }}</p>
+
+                     <p><a></a>
+                        <img src="/static/fb_img-{{ doyouknow.update_number }}.jpg" alt={{doyouknow.title}}></a><br> </p>
+
+            </Div><br><br>
+             {% endfor %}
+
+        </div>
+
+        </div>
+        <div class=google_ads_hz>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- google_ads_doyouknow_hz -->
+        <ins class="adsbygoogle"
+        style="display:inline-block;width:728px;height:90px"
+        data-ad-client="ca-pub-2337874901791776"
+        data-ad-slot="8305912244"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        </div>
+{% endblock %}

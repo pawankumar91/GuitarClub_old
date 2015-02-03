@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block html %}
+    <html id="main">
+{% endblock %}
+{% block title %}
+    <title> Video Guitar Lessons </title>
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="This page contains video guitar lessons ">
+    <meta name="keywords" content="online guitar Exercises, Video Guitar Lessons, Guitar lessons for beginners, Guitar lessons for dummies, online guitar video tutorials">
+    <meta name="robots" content="all">
+{% endblock %}
+
+{% block body %}
+    <body  id="main">
+{% endblock %}
+{% block content %}
+    <div class="jumbotron1">
+	<div class="jumbotron1_sub">
+	<p><strong>Get Started, lets break some strings :) </strong></p>
+
+	</div>
+	</div>
+<div class = "subcontent_all">
+	<div class ="dont_move">
+	    <ul id="level-one">
+			<li id="menu">
+				MENU
+			</li><br>
+			<li id="level-two">
+				<ul id="level-two" >
+				<li><a href ="/learn_guitar/">Learn Guitar From Basics</a></li>
+				<li><a href="/learn_guitar_chords/">Learn Guitar Chords</a></li>
+				<li><a href="/learn_more_guitar_chords/">Learn More Guitar Chords</a></li>
+				<li><a href="/video_guitar_lessons/">Video Guitar Lessons</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class = "learn_guitar_vsearch">
+		<div class = "searchbar_vs">
+			<form method="get" action="/video_search" id="search1_v">
+				<input name="q" type="text" size="300" placeholder="search to play your favourite song For eg: 21 Guns" />
+			</form>
+		</div><br><br>
+		<div class="ifr">
+		    <iframe width="560" height="315" src="//www.youtube.com/embed/{{link1}}" frameborder="0" allowfullscreen></iframe>
+	    </div><br><br>
+        <div class="ifr">
+		    <iframe width="560" height="315" src="//www.youtube.com/embed/{{link2}}" frameborder="0" allowfullscreen></iframe>
+	    </div><br><br>
+    	<div class="ifr">
+	    	<iframe width="560" height="315" src="//www.youtube.com/embed/{{link3}}" frameborder="0" allowfullscreen></iframe>
+	    </div><br><br>
+        <div class="ifr">
+    		<iframe width="560" height="315" src="//www.youtube.com/embed/{{link4}}" frameborder="0" allowfullscreen></iframe>
+	    </div><br><br>
+        <div class="ifr">
+		    <iframe width="560" height="315" src="//www.youtube.com/embed/{{link5}}" frameborder="0" allowfullscreen></iframe>
+	    </div>
+	</div>
+<div class = "google_ads_vt1">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- google_ads_7_vs -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:225px;height:600px"
+     data-ad-client="ca-pub-2337874901791776"
+     data-ad-slot="8256407443"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	</div>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <div class = google_ads_hz>
+        <!-- google_ads_vsearch_hz -->
+        <ins class="adsbygoogle"
+        style="display:inline-block;width:728px;height:90px"
+        data-ad-client="ca-pub-2337874901791776"
+        data-ad-slot="6831655849"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+{% endblock %}

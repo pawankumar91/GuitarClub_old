@@ -6,20 +6,20 @@ body {
 }
 .menu {
   background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
-  left: -200px;  /* start off behind the scenes */
+  left: -400px;  /* start off behind the scenes */
   height: 58.25%;
   position: fixed;
-  width: 200px;
+  width: 400px;
 }
 
 .jumbotron {
-  background-image: url('http://cdn.mycoverpoint.com/wp-content/uploads/Black-Guitar-Facebook-Timeline-Cover.png'); 
+  background-image: url('http://cdn.mycoverpoint.com/wp-content/uploads/Black-Guitar-Facebook-Timeline-Cover.png');
   height: 60%;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
-	
+
 }
 
 .menu ul {

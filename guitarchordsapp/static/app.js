@@ -1,15 +1,7 @@
-var main = function(){
-$('.icon-menu').hover(function(){
-$('.hidemenu').animate({left:"0px"},200);
-});
-};
-
-
-
 var currentBackground = 0;
 var backgrounds = [];
 backgrounds[0] = '/static/Black-Guitar-Facebook-Timeline-Cover.png';
-backgrounds[1] = '/static/background_wall.jpg';
+backgrounds[1] = '/static/acoustic-guitar-wallpaper-high-resolution-7718[1].jpg';
 backgrounds[2] = '/static/Guitar-Strings.jpg';
 backgrounds[3] = '/static/playing-guitar.jpg';
 
@@ -21,8 +13,7 @@ function changeBackground() {
           $('.jumbotron').css({
             'background-image' : "url('" + backgrounds[currentBackground] + "')"
         });
-  setTimeout(changeBackground, 3000);
+  setTimeout(changeBackground, 4000);
+
             };
 
-
-$(document).ready(main);

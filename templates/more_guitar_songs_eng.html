@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block html %}
+    <html id="main">
+{% endblock %}
+{% block title %}
+    <title> More Guitar Songs </title>
+{% endblock %}
+
+{% block meta %}
+    <meta name="description" content="This page is contains more guitar songs and popular guitar chords">
+    <meta name="keywords" content="Guitar Songs and chords , popular guitar chords and songs">
+    <meta name="robots" content="all">
+{% endblock %}
+
+{% block body %}
+    <body  id="main">
+{% endblock %}
+{% block content %}
+    <div class="jumbotron1">
+	<div class="jumbotron1_sub">
+	<p><strong>Choose from the list of {{language|upper}}  songs below</strong></p>
+		<div class = "searchbar">
+			<form method="get" action="/search" id="search1">
+				<input name="q" type="text" size="40" placeholder="Search chords..." />
+			</form>
+		</div>
+    </div>
+    </div>
+    <div class = "subcontent_all">
+	<div class = "songcontent_new">
+	<div class = "alphabetical_order">
+	<h5 id="list_heading1"> Filter by Artist or Album name</h5>
+	<ul class = "pull-middle">
+		{% for d in alpha %}
+			<li id="list_heading1"><a href="/guitar_alpha_page/{{d}}/{{language}}">{{d}}</a></li>
+		{% endfor %}
+
+
+		</ul>
+</div>
+
+		<div class = "songcontent_data">
+
+			<p id="list_heading"> List of Songs ... </p>
+			{% if songs %}
+					<ul type="square">
+						{% for c,d,e in songs %}
+							<li><a id = {{d}} alt={{d|slugify}} href ="/det_guitarchords/{{d}}" class = "click" >{{c|upper}}-{{d}};</a>
+							<p id="view" style="display:inline">views({{e}})</p>
+							</li>
+						{% endfor %}
+					</ul><br>
+				{% else %}
+				<p> &#9785 , No Results Found </p>
+					{% endif %}
+		</div><br><br>
+
+    </div>
+	</div>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<div class = "google_ads_hz">
+    <!-- google_ads_more_guit_eng_hz -->
+    <ins class="adsbygoogle"
+    style="display:inline-block;width:728px;height:90px"
+    data-ad-client="ca-pub-2337874901791776"
+    data-ad-slot="3878189442"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+{% endblock %}

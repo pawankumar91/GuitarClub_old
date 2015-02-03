@@ -21,10 +21,16 @@ SECRET_KEY = 'wx43gx&f4f=8)on7frpk_vm8!*_h5bwa(+%tbg8%+(-4%7_%bk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+TEMPLATE_DEBUG = False
 
-TEMPLATE_DEBUG = True
+ALLOWED_HOSTS = ['pakumar.pythonanywhere.com', 'www.guitarclub.in']
 
-ALLOWED_HOSTS = ['pakumar.pythonanywhere.com']
+#Admin When DEBUG=False and a view raises an exception, Django will email these people with the full exception information. Each member of the tuple should be a tuple of (Full name, email address)
+ADMINS = (('Pawan','pawan.kumar.13.1991@gmail.com' ), ('Aditi','adiaggarwal89@gmail.com') , ('Pawan','Pawan.Kumar@mu-sigma.com') , ('Aditi','Aditi.Aggarwal@mu-sigma.com'))
+
+
+#email
+#EMAIL_BACKEND = ()
 
 
 # Application definition
@@ -61,6 +67,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
 	#'djangodblog.DBLogMiddleware',
 )
 
@@ -72,29 +79,30 @@ WSGI_APPLICATION = 'guitarchords.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'testdb',
-#        'USER': 'pakumar',
- #       'PASSWORD': 'P@ssw0rd',
-  #  }
-#}
-
-
 DATABASES = {
-   'default': {
-      'ENGINE': 'django.db.backends.sqlite3',
-     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'pakumar$dm_gc',
+    'USER': 'pakumar',
+    'PASSWORD': 'P@ssw0rd',
+    'HOST':'mysql.server',
 }
 }
+
+
+#DATABASES = {
+#   'default': {
+#      'ENGINE': 'django.db.backends.sqlite3',
+#     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#}
+#}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -102,15 +110,19 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
+MEDIA_ROOT = '/home/pakumar/GuitarClub/guitarchordsapp/static/'
+MEDIA_URL = '/media/'
 
+
+STATIC_URL = '/static/'
+#STATIC_ROOT = '/home/pakumar/GuitarClub/guitarchordsapp/static/'
 
 STATICFILES_DIRS = (
-    '/home/pakumar/GuitarClub/guitarchordsapp/static/'
+    '/home/pakumar/GuitarClub/guitarchordsapp/static/',
 #'C:/Users/pakumar/python_practice/guitarchords/guitarchordsapp/static/',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.

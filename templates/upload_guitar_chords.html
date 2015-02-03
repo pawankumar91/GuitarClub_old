@@ -1,8 +1,10 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <title> Guitar Chords </title>
 {% load staticfiles %}
 
 <head>
+<meta name="robots" content="NONE,NOARCHIVE" />
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
@@ -13,6 +15,27 @@
 
     <script type="text/javascript" src="/static/app.js"></script>
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56999478-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script>
+$(function() {
+$( "#datepicker" ).datepicker();
+});
+</script>
 
 </head>
 <body>
@@ -27,16 +50,15 @@
 
 		<ul>
 		<ul class = "pull-left">
-		<li> <a href = "/home/">Logo The Guitar Club</a></li>
+		<li class = "pad"> <a href = "/home/">Logo The Guitar Club</a></li>
 		</ul>
 		<ul class = "pull-right">
-		<li><a href="/home/">Home</a></li>
-		<li><a href = "/learn_guitar/">Learn Guitar</a></li>
-		<li><a href="/guitar_chords/">Guitar Chords</a></li>
-		<li><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
-		<li><a href="/upload_guitar_chords/">Upload Guitar Chords</a></li>
-		<li><a href="#">Your Guitar Club</a></li>
-		<li><a href="#">Contact</a></li>
+		<li class = "pad"><a href="/home/">Home</a></li>
+		<li class = "pad"><a href = "/learn_guitar/">Learn Guitar</a></li>
+		<li class = "pad"><a href="/guitar_chords/">Guitar Chords</a></li>
+		<li class = "pad"><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
+		<li class = "pad"><a href="#">Your Guitar Club</a></li>
+		<li class = "pad"><a href="#">Contact</a></li>
 		</ul>
 		</ul>
 	</div>
@@ -53,29 +75,28 @@
 	<br>
 
 	<form name="htmlform" method="post" action="/capture_guitar_chords/">{%csrf_token%}
-<label for="first_name">First Name* :</label>
-<input  type="text" name="first_name" maxlength="50" size="30"><br>
-<label for="last_name">Last Name* :</label>
-<input  type="text" name="last_name" maxlength="50" size="30"><br>
-<label for="email">Email Address* :</label>
-<input  type="text" name="email" maxlength="80" size="30"><br>
-<label for="songcategory">SongCategory* :</label>
-<select name="mydropdown_0">
-	<option value="gospel">Gospel</option>
-	<option value="non-gospel">Non-Gospel</option>
-</select>
-<label for="category">Category* :</label>
+<label for="datepicker">Song Release Date* :</label>
+<input type="text" id="datepicker" name = "datepicker">
+<label for="song_name">Song Name* :</label>
+<input  type="text" name="song_name" maxlength="80" size="30"><br>
+<label for="albumname">Album/Movie Name* :</label>
+<input  type="text" name="albumname" maxlength="80" size="30"><br>
+<label for="artist_name">Artist Name* :</label>
+<input  type="text" name="artist_name" maxlength="80" size="30"><br>
+<label for="language">Language* :</label>
 <select name="mydropdown">
-	<option value="english">English</option>
-	<option value="hindi">Hindi</option>
+	<option value="english">ENGLISH</option>
+	<option value="hindi">HINDI</option>
 	<option value="tamil">TAMIL</option>
 	<option value="kannada">KANNADA</option>
+	<option value="telgu">TELUGU</option>
 	<option value="bangla">BANGLA</option>
 </select>
-<label for="songname">Song Name* :</label>
-<input  type="text" name="songname" maxlength="80" size="30"><br>
-<label for="albumname">Film / Artist Name* :</label>
-<input  type="text" name="albumname" maxlength="80" size="30"><br>
+<label for="gvsng">Category* :</label>
+<select name="mydropdown_0">
+	<option value="non-gospel">Non-Gospel</option>
+	<option value="gospel">Gospel</option>
+	</select>
 <label for="guitarchords">Guitar Chord* :</label>
 <pre><textarea  name="guitarchords" ></textarea></pre><br>
  <span><input type="submit" value="Submit">   </span>

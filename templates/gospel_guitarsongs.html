@@ -1,60 +1,30 @@
-<html>
-<title> Guitar Chords </title>
-{% load staticfiles %}
+{% extends "base.html" %}
+{% block html %}
+    <html id="main">
+{% endblock %}
+{% block title %}
+    <title> Guitar Chords </title>
+{% endblock %}
 
-<head>
+{% block meta %}
+    <meta name="description" content="This page contains guitar chords for gospel or christian songs">
+    <meta name="keywords" content="Chords for Gospel songs, chords for christian songs, guitar chords for gospel songs, latest chiristian song guitar chords">
+    <meta name="robots" content="all">
+{% endblock %}
 
-	<meta name="description" content="This page is about France, with particular emphasis on baguettes">
-
-<meta name="keywords" content="Chords for Gospel songs, chords for christian songs, guitar chords for gospel songs, latest chiristian song guitar chords">
-
-<meta name="robots" content="all">
-
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
-<link href="/static/style.css" rel="stylesheet">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
-   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
-
-    <script type="text/javascript" src="/static/app.js"></script>
-    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-
-</head>
-<body>
-<div class="nav">
-
-		<!-- Menu icon -->
-		<!--div class="icon-close"-->
-		<!--img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png"-->
-		<!--/div-->
-
-		<!-- Menu -->
-
-		<ul>
-		<ul class = "pull-left">
-		<li> <a href = "/home/">Logo The Guitar Club</a></li>
-		</ul>
-		<ul class = "pull-right">
-		<li><a href="/home/">Home</a></li>
-		<li><a href = "/learn_guitar/">Learn Guitar</a></li>
-		<li><a href="/guitar_chords/">Guitar Chords</a></li>
-		<li><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
-		<li><a href="/upload_guitar_chords/">Upload Guitar Chords</a></li>
-		<li><a href="#">Your Guitar Club</a></li>
-		<li><a href="#">Contact</a></li>
-		</ul>
-		</ul>
-	</div>
-	<div class="jumbotron1">
+{% block body %}
+    <body  id="main">
+{% endblock %}
+{% block content %}
+    <div class="jumbotron1">
+	<div class="jumbotron1_sub">
+		<p><strong>CHOOSE FROM THE LIST OF GOSPEL SONGS BELOW</strong></p>
 		<div class = "searchbar">
 			<form method="get" action="/search" id="search1">
 				<input name="q" type="text" size="40" placeholder="Search chords..." />
 			</form>
 		</div>
-		<p><strong>CHOOSE FROM THE LIST OF GOSPEL SONGS BELOW</strong></p>
+	</div>
 	</div>
 	<div class = "songcontent_new">
 	<div class = "alphabetical_order">
@@ -68,13 +38,13 @@
 		</ul>
 </div>
 
-		<div class = "songcontent_english">
+		<div class = "songcontent_data">
 
 			<p> List of Songs from <strong>[{{albumname|upper}}]</strong>...</p>
 			{% if song_name %}
 					<ul>
-						{% for d in song_name %}
-							<li><a id = {{d}} alt={{d|slugify }} href ="/gospel_guitarchords/{{d}}" class = "click" >{{d}}</a> </li>
+						{% for d,e in song_name %}
+							<li><a id = {{d}} alt={{d|slugify }} href ="/gospel_guitarchords/{{d}}" class = "click" >{{d}}; &nbsp; views({{e}})</a> </li>
 						{% endfor %}
 					</ul><br>
 			{% else %}
@@ -84,31 +54,12 @@
 
 
 	</div>
-<div class = "footer">
-	      <h3 class="float">&copy; 2014-15 The Guitar Club. All rights reserved.</h3>
-	  <h5>Contact US</h5>
-       <div id="footer_address">
-        <p>Registered Office:<br/>
-        Bangalore, Karnataka, <br/>
-        India<br/>
-        (not our trading address)</p>
-      </div>
-
-      <div class="footer-nav">
-        <ul class = "pull-right">
-          <li><a href="/home/">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Software</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-        </ul>
-      </div>
-
-</div>
-
-
-</body>
-
-
-
-	</html>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% endblock %}

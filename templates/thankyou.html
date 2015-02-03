@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <title> Guitar Chords </title>
 {% load staticfiles %}
@@ -5,12 +6,22 @@
 <head>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
 <link href="/static/style.css" rel="stylesheet">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-56999478-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     <script type="text/javascript" src="/static/app.js"></script>
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 
@@ -26,30 +37,34 @@
 
 		<ul>
 		<ul class = "pull-left">
-		<li> <a href = "/home/">Logo The Guitar Club</a></li>
+		<li class = "pad"> <a href = "/home/">Logo The Guitar Club</a></li>
 		</ul>
 		<ul class = "pull-right">
-		<li><a href="/home/">Home</a></li>
-		<li><a href = "/learn_guitar/">Learn Guitar</a></li>
-		<li><a href="/guitar_chords/">Guitar Chords</a></li>
-		<li><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
-		<li><a href="/upload_guitar_chords/">Upload Guitar Chords</a></li>
-		<li><a href="#">Your Guitar Club</a></li>
-		<li><a href="#">Contact</a></li>
+		<li class = "pad"><a href="/home/">Home</a></li>
+		<li class = "pad"><a href = "/learn_guitar/">Learn Guitar</a></li>
+		<li class = "pad"><a href = "/video_guitar_lessons/">Video Tutorials</a></li>
+		<li class = "pad"><a href="/guitar_chords/">Guitar Chords</a></li>
+		<li class = "pad"><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
+		<li class = "pad"><a href="#">Your Guitar Club</a></li>
+		<li class = "pad"><a href="#">Contact</a></li>
 		</ul>
 		</ul>
 	</div>
 	<div class="jumbotron1">
+	<div class="jumbotron1_sub">
+	<p><strong>Thank You, Please continue to support us... </strong></p>
 		<div class = "searchbar">
 			<form method="get" action="/search" id="search1">
 				<input name="q" type="text" size="40" placeholder="Search chords..." />
 			</form>
 		</div>
-		<p><strong>Thank You, Please continue to support us... </strong></p>
+	</div>
 	</div>
 	<div class = "songcontent_new">
-	<p> Thank you <strong>[{{name}}]</strong> <br>
-		For uploading the song <strong>[{{songname}}]</strong> | <strong>[{{category}}]</strong> from <strong>[{{albumname}}]</strong> <br><br>
+	<p> Thank you <strong>{{username}}</strong> <br>
+		For uploading the <br> Song: <strong>{{song_name}}</strong> <br>
+		category: <strong>{{category}}</strong> <br> album name : <strong>{{albumname}}</strong> <br>
+		song release date <strong>{{song_release_date}}</strong><br>
 	The same will be reflected on the website in the next 24 hours.<br>
 	Please continue to support us...
 <br>

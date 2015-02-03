@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block html %}
+    <html id="main">
+{% endblock %}
+{% block title %}
+    <Title>Guitar Club - Do You Know</title>
+{% endblock %}
+
+{% block meta %}
+    <meta charset="utf-8" />
+    <meta name="description" content="Do you know?? Heaps of interesting fun facts and figures about music to keep you entertained for hours">
+    <meta name="keywords" content="Popular Hindi Guitar Chords, Popular English Guitar Chords, Popular Gospel Guitar Chords, Popular Christian Guitar Songs and Chords, Popular Tamil Guitar Chords, How to play Guitar, Learn to play Guitar in 30minutes">
+    <meta name="robots" content="all">
+{% endblock %}
+
+{% block fbmeta %}
+        <meta property="og:title" content="Guitar Club -{{doyouknow.title}}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="http://www.guitarclub.in/dOyOuKnOw_details/{{doyouknow.id}}/"/>
+        <meta property="og:image" content="http://www.guitarclub.in/static/fb_img-{{doyouknow.update_number}}.jpg"/>
+        <meta property="og:site_name" content="GuitarClub"/>
+        <meta property="fb:admins" content="1087413090"/>
+        <meta property="og:description"
+              content="{{doyouknow.body}}"/>
+{% endblock %}
+
+{% block body %}
+    <body  id="main">
+{% endblock %}
+{% block content %}
+    <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+            </script>
+<div class="jumbotron1">
+        	<div class="jumbotron1_sub">
+        		<p><strong>Do you know ???</strong></p>
+        		<div class = "searchbar">
+        			<form method="get" action="/search" id="search1">
+        				<input name="q" type="text" size="40" placeholder="Search chords..." />
+        			</form>
+        		</div>
+        	</div>
+        </div>
+        <!--render from data base-->
+
+        <div class = "subcontent_all">
+        <div class = "dyk_content">
+            <Div class="dyk_subcontent">
+                    <h1>{{ doyouknow.title }}</h1>
+                     <p id="content">{{ doyouknow.body|linebreaksbr}}</p>
+                     <p>
+                    <a><img src="/static/fb_img-{{doyouknow.update_number}}.jpg"></a>
+                    </p>
+            </Div>
+
+        </div></div>
+        <div class = "dyk_content1">
+        <div class="fb-like_dyks">
+            <div class="fb-like" data-href="http://www.guitarclub.in/dOyOuKnOw_details/{{doyouknow.id}}/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" data-colorscheme="dark"></div>
+        </div>
+
+        </div>
+{% endblock %}

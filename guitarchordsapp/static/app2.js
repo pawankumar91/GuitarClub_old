@@ -5,7 +5,7 @@ $('.menu').animate({left:"0px"},200);
 $('.jumbotron').animate({left: "285px"}, 200);
 });
 $('.icon-close').click(function(){
-$('.menu').animate({left:"-200px"},200);
+$('.menu').animate({left:"-400px"},200);
 });
 
 };

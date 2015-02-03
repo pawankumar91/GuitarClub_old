@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<title> Guitar Chords </title>
+{% load staticfiles %}
+
+<head>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+<link href="/static/style.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+   <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56999478-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <script type="text/javascript" src="/static/app.js"></script>
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+
+</head>
+<div class="nav">
+
+		<!-- Menu icon -->
+		<!--div class="icon-close"-->
+		<!--img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png"-->
+		<!--/div-->
+
+		<!-- Menu -->
+
+		<ul>
+		<ul class = "pull-left">
+		<li class = "pad"> <a href = "/home/">Logo The Guitar Club</a></li>
+		</ul>
+		<ul class = "pull-right">
+		<li class = "pad"><a href="/home/">Home</a></li>
+		<li class = "pad"><a href = "/learn_guitar/">Learn Guitar</a></li>
+		<li class = "pad"><a href = "/video_guitar_lessons/">Video Tutorials</a></li>
+		<li class = "pad"><a href="/guitar_chords/">Guitar Chords</a></li>
+		<li class = "pad"><a href="/gospel_guitar_page/">Gospel Guitar Chords</a></li>
+		<li class = "pad"><a href="#">Your Guitar Club</a></li>
+		<li class = "pad"><a href="#">Contact</a></li>
+		</ul>
+		</ul>
+	</div>
+	<div class="jumbotron1">
+	<div class="jumbotron1_sub">
+	<p><strong>Thank You, Please continue to support us... </strong></p>
+		<div class = "searchbar">
+			<form method="get" action="/search" id="search1">
+				<input name="q" type="text" size="40" placeholder="Search chords..." />
+			</form>
+		</div>
+	</div>
+	</div>
+	<div class = "songcontent_new">
+	<p> Hi <strong>{{username}},</strong> <br>
+		Song <strong>{{song_name}}</strong> from the <strong>{{albumname}}</strong> {{song_release_date}} already exists in our server.<br><br>
+	    Please upload chords for another song... <br>
+
+<br>
+
+
+	</p>
+	</div>
+<div class = "footer">
+	      <h3 class="float">&copy; 2014-15 The Guitar Club. All rights reserved.</h3>
+	  <h5>Contact US</h5>
+       <div id="footer_address">
+        <p>Registered Office:<br/>
+        Bangalore, Karnataka, <br/>
+        India<br/>
+        (not our trading address)</p>
+      </div>
+
+      <div class="footer-nav">
+        <ul class = "pull-right">
+          <li><a href="/home/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Software</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+</div>
+
+
+</body>
+
+
+
+	</html>

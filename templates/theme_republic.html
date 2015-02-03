@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block html %}
+    <html id="republic">
+{% endblock %}
+{% block title %}
+    <title> Video Guitar Lessons - Republic Day Special </title>
+{% endblock %}
+
+{% block meta %}
+    <meta charset="utf-8" />
+    <meta name="description" content="Learn to play SAARE JAHAN SE ACHA on guitar with video tutorials this Republic Day">
+    <meta name="keywords" content="how to play Vande Matram on guitar, how to play Mere desh Ki dharti sona ugle on guitar, how to play Jana Gana Mana on guitar, how to play patriotic songs on guitar" >
+    <meta name="robots" content="all">
+{% endblock %}
+
+{% block fbmeta %}
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="LEARN TO PLAY PATRIOTIC SONGS - SAARE JAHAN SE ACHA"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.guitarclub.in/desh_bhakti/"/>
+    <meta property="og:image" content="http://www.guitarclub.in/static/republic_day_2.jpg"/>
+    <meta property="og:site_name" content="GuitarClub"/>
+    <meta property="fb:admins" content="1087413090"/>
+    <meta property="og:description"
+    content="Welcome to THE GUITAR CLUB - A virtual world for all the guitar lovers. Learn to play SAARE JAHAN SE ACHA on guitar with video tutorials this Republic Day"/>
+
+{% endblock %}
+
+{% block body %}
+    <body id="republic">
+{% endblock %}
+{% block content %}
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="jumbotron1_chris">
+	<div class="jumbotron1_sub">
+	<p><strong>POPULAR DESH BHAKTI SONGS...  </strong></p>
+	</div>
+	<div class="fb-share-button" data-href="http://www.guitarclub.in/republic_day/" data-layout="button_count"></div>
+	</div>
+
+<div class = "subcontent_all">
+	<div class ="dont_move">
+	    <ul id="level-one">
+			<li id="menu">
+				MENU
+			</li><br>
+			<li id="level-two">
+				<ul id="level-two" >
+				<li><a href ="/learn_guitar/">Learn Guitar From Basics</a></li>
+				<li><a href="/learn_guitar_chords/">Learn Guitar Chords</a></li>
+				<li><a href="/learn_more_guitar_chords/">Learn More Guitar Chords</a></li>
+				<li><a href="/video_guitar_lessons/">Video Guitar Lessons</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class = "learn_guitar_chris">
+		<div class = "searchbar_vs">
+			<form method="get" action="/video_search" id="search1_v">
+				<input name="q" type="text" size="300" placeholder="search to play patriotic songs, e.g. vande matram" />
+			</form>
+		</div><br><br>
+        <h2>LEARN TO PLAY VANDE MATRAM</h2>
+		<div class="ifr">
+		<iframe width="560" height="315" src="//www.youtube.com/embed/2plYQCSLKZg" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<br> <br>
+		<h2>LEARN TO PLAY SAARE JAHAN SE ACHA</h2>
+		<div class="ifr">
+		<iframe width="560" height="315" src="//www.youtube.com/embed/ug2VdW5CN9s" frameborder="0" allowfullscreen></iframe>
+        </div>
+		<br> <br>
+	</div>
+	</div>
+{% endblock %}
